@@ -27,31 +27,12 @@ const images = [
 ];
 const navListGalery = document.querySelector('.gallery');
 console.dir(navListGalery);
-const itemList = document.createElement('li');
-navListGalery.append(itemList);
-const imageFirstEl = document.createElement('img');
-imageFirstEl.src = images[0].url;
-imageFirstEl.alt = images[0].alt;
-console.log(imageFirstEl);
-itemList.append(imageFirstEl);
-console.log(itemList);
-const imageSecondEl = document.createElement('img');
-imageSecondEl.src = images[1].url;
-imageSecondEl.alt = images[1].alt;
-console.log(imageSecondEl);
-const imageThirdEl = document.createElement('img');
-imageThirdEl.src = images[2].url;
-imageThirdEl.alt = images[2].alt;
-console.log(imageThirdEl);
-const imageFourthEl = document.createElement('img');
-imageFourthEl.src = images[3].url;
-imageFourthEl.alt = images[3].alt;
-console.log(imageFourthEl);
-const imageFifthEl = document.createElement('img');
-imageFifthEl.src = images[4].url;
-imageFifthEl.alt = images[4].alt;
-console.log(imageFifthEl);
-const imageSixthEl = document.createElement('img');
-imageSixthEl.src = images[5].url;
-imageSixthEl.alt = images[5].alt;
-console.log(imageSixthEl);
+
+const makeGalery = images
+  .map(
+    ({ url, alt }) =>
+      `<li class = "list-item"><img src = ${url} alt = ${alt} width = 300 ></li>`
+  )
+  .join('');
+
+navListGalery.insertAdjacentHTML('beforeend', makeGalery);
