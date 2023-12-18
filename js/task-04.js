@@ -7,8 +7,11 @@ userForm.addEventListener('submit', e => {
   e.preventDefault();
   const elems = e.target.elements;
 
-  if (elems.email.value === '' && elems.password.value === '') {
+  if (elems.email.value === '' || elems.password.value === '') {
     alert('All form fields must be filled in');
+  } else {
+    console.log(data);
+    userForm.reset();
   }
 
   const data = {

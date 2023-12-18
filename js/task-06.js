@@ -8,12 +8,12 @@ btnCreate.addEventListener('click', e => {
   if (form.value >= 1 && form.value < 100) {
     amount = form.value;
   } else {
-    alert`"Будь ласка, введіть число від 1 до 100."`;
+    alert('Будь ласка, введіть число від 1 до 100.');
     return;
   }
   createBoxes(amount);
 });
-btnDestroy.addEventListener('click', е => {
+btnDestroy.addEventListener('click', e => {
   destroyBoxes();
   form.value = '';
 });
