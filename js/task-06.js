@@ -5,7 +5,7 @@ const btnDestroy = document.querySelector('[data-destroy]');
 
 btnCreate.addEventListener('click', e => {
   let amount;
-  if (form.value > 1 && form.value < 100) {
+  if (form.value >= 1 && form.value < 100) {
     amount = form.value;
   } else {
     alert`"Будь ласка, введіть число від 1 до 100."`;
@@ -36,6 +36,6 @@ function createBoxes(amount) {
   }
 }
 
-function destroyBoxes {
+function destroyBoxes() {
   boxes.innerHTML = ``;
 }
