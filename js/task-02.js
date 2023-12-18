@@ -26,7 +26,6 @@ const images = [
   },
 ];
 const navListGalery = document.querySelector('.gallery');
-console.dir(navListGalery);
 
 const makeGalery = images
   .map(
