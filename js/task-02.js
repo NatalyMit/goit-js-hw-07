@@ -25,13 +25,13 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
-const navListGalery = document.querySelector('.gallery');
+const navListGallery = document.querySelector('.gallery');
 
-const makeGalery = images
+const makeGallery = images
   .map(
     ({ url, alt }) =>
-      `<li class = "list-item"><img src = ${url} alt = ${alt} width = 300 ></li>`
+      `<li class = "list-item"><img src = "${url}" alt = "${alt}" width = "300" ></li>`
   )
   .join('');
 
-navListGalery.insertAdjacentHTML('beforeend', makeGalery);
+navListGallery.insertAdjacentHTML('beforeend', makeGallery);

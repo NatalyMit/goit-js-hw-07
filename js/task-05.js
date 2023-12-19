@@ -11,7 +11,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 clickButton.addEventListener('click', e => {
-  let lotoColor = getRandomHexColor();
-  colorBox.style.backgroundColor = lotoColor;
-  box.firstElementChild.firstElementChild.textContent = lotoColor;
+  let randomColor = getRandomHexColor();
+  colorBox.style.backgroundColor = randomColor;
+  colorSpan.textContent = randomColor;
 });
